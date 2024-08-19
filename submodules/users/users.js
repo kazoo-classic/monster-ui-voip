@@ -3022,7 +3022,7 @@ define(function(require) {
 					}
 				});
 
-				if (formData.hasOwnProperty('url')) {
+				if (formData.hasOwnProperty('url') && formData.url != '') {
 					_.each(user.call_recording, function(category, categoryName) {
 						_.each(category, function(direction, directionName) {
 							if (direction.enabled === true) {
@@ -3064,7 +3064,7 @@ define(function(require) {
 						digits: true
 					},
 					'url': {
-						required: true
+						required: false
 					}
 				}
 			});
